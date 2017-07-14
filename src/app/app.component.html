@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div style="text-align:center">
+  <h1>Dojo Mail</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Importance</th>
+        <th>Subject</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let x of emails">
+        <td>{{x.email}}</td>
+        <td>
+          <span *ngIf="x.importance">High</span>
+          <span *ngIf="!x.importance">Low</span>
+        </td>
+        <td>{{x.subject}}</td>
+        <td>{{x.content}}</td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
